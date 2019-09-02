@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from './Button.js';
+import Profile from './Profile.js';
+import Name from './Name';
+import unsplash from'./unsplash.jpg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <h1>Profile</h1>
+
+      <Profile  src={unsplash}  style={{width:'100px' , height:'100px'}}/>
+
+      <Name names='Selima Haj Slimene' > </Name>
+
+      <Button name='LinkedIn' onSimpleClick={()=>{window.location='https://www.linkedin.com/'}}/>
+      <Button name='Facebook' onSimpleClick={()=>{window.location='https://www.facebook.com/'}}/ >
+
+
+     
+
+        
+        </>
+
+  
   );
 }
 
